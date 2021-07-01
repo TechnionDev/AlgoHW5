@@ -1,0 +1,1280 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\begin_preamble
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{PT Mono}
+\definecolor{lbcolor}{rgb}{0.2,0.2,0.2}  
+\end_preamble
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+\end_removed_modules
+\begin_modules
+eqs-within-sections
+figs-within-sections
+linguistics
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Algo HW5
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Dani Bondar - 206560856
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Gur Telem - 206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+Drawing:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename q1s1.png
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+Drawing:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename q1s2.png
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Yes
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+It's a min cut (although not the only possible min cut).
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Enumerate
+True
+\end_layout
+
+\begin_layout Enumerate
+False
+\end_layout
+
+\begin_layout Enumerate
+True
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+Backpack with weight capacity of 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ There are 
+\begin_inset Formula $n$
+\end_inset
+
+ items 
+\begin_inset Formula $\left\{ a_{1},\dots,a_{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each item 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ has a weight of 
+\begin_inset Formula $w_{i}\in N$
+\end_inset
+
+ and value 
+\begin_inset Formula $p_{i}\in\left\{ 1,2,\dots,P\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given partitioning 
+\begin_inset Formula $G_{1},\dots,G_{k}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\bigcup_{i=1,\dots,k}^{\bullet}G_{i}=\left\{ a_{1},\dots,a_{n}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's use dynamic programming to find the optimal solution (highest total
+ value without exceeding max weight and only a single item at most from
+ each partition):
+\end_layout
+
+\begin_layout Standard
+We'll assume that the set of item 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ can be found in 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ (if our data structure isn't built in a way to allow that, we can iterate
+ on all the items in each partition, creating a map array s.t.
+ 
+\begin_inset Formula $\text{map }\left[i\right]=t$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $a_{i}\in G_{t}$
+\end_inset
+
+).
+ This doesn't increase the total time complexity of our algorithm because
+ it runs in 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+ and only a single time).
+\end_layout
+
+\begin_layout Standard
+We'll note that at most we have 
+\begin_inset Formula $n$
+\end_inset
+
+ partitions because the partitions can't be empty and there are only 
+\begin_inset Formula $n$
+\end_inset
+
+ items.
+\end_layout
+
+\begin_layout Standard
+Since there are 
+\begin_inset Formula $P$
+\end_inset
+
+ values, we can use radix sort to sort the items 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ by value (in each partition as well as in general) in a time complexity
+ of 
+\begin_inset Formula $O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The idea:
+\end_layout
+
+\begin_layout Enumerate
+For each partition, check which item (if any) that you choose, give the
+ best result.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For each item, calculate the subtask with the next partition and a total
+ max weight of 
+\begin_inset Formula $W$
+\end_inset
+
+ minus the weight of the item chosen (recursively).
+\end_layout
+
+\begin_layout Enumerate
+Calculate also the possibility of not choosing an item (recursively).
+\end_layout
+
+\begin_layout Enumerate
+Choose the best solution and save it for future reference
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Let's define the recursive formula
+\begin_inset Formula 
+\[
+R\left(s,t\right)=\begin{cases}
+-\infty & t<0\\
+0 & t\geq0\wedge j\leq0\\
+\max\left\{ \text{maxValue}\left(s-1,t\right),\max_{a_{i}\in G_{s}}\left\{ p_{i}+\text{maxValue}\left(s-1,t-w_{i}\right)\right\} \right\}  & t\geq0j>0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's prove that calculating a matrix s.t.
+ its values are the values of this recursive formula give a matrix of results
+ for 
+\begin_inset Formula $n,W$
+\end_inset
+
+ (cell index) and the calculation of that matrix is done in 
+\begin_inset Formula $O\left(nW\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The algorithm (we'll mark it's name 
+\begin_inset Formula $\text{maxValue}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+Done only once:
+\end_layout
+
+\begin_layout Enumerate
+Initialize a matrix of size 
+\begin_inset Formula $k+1\times W+1$
+\end_inset
+
+ (including 
+\begin_inset Formula $0$
+\end_inset
+
+ indexes) with all the values set to 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Call 
+\begin_inset Formula $\text{maxValue}\left(k,W\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Return 
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the recursion
+\end_layout
+
+\begin_layout Enumerate
+The parameters are 
+\begin_inset Formula $s,t$
+\end_inset
+
+ respectively
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $s=0$
+\end_inset
+
+ then save 
+\begin_inset Formula $\text{solutions}\left[s\right]\left[t\right]=0$
+\end_inset
+
+ and return
+\end_layout
+
+\begin_layout Enumerate
+Init 
+\begin_inset Formula $\max=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $a_{i}\in G_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Skip if 
+\begin_inset Formula $\left[s-1\right]\left[t-w_{i}\right]$
+\end_inset
+
+ are negative indexes (either/both)
+\end_layout
+
+\begin_layout Enumerate
+Check if the solution 
+\begin_inset Formula $\text{solutions}\left[s-1\right]\left[t-w_{i}\right]$
+\end_inset
+
+ doesn't exist, call 
+\begin_inset Formula $\text{maxValue}\left(s-1,t-w_{i}\right)$
+\end_inset
+
+ first
+\end_layout
+
+\begin_layout Enumerate
+If that solution is 
+\begin_inset Formula $>\max$
+\end_inset
+
+ then 
+\begin_inset Formula $\max=\text{solutions}\left[s-1\right]\left[t-w_{i}\right]+p_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\text{solutions}\left[s-1\right]\left[t\right]>\max$
+\end_inset
+
+ then 
+\begin_inset Formula $\max=\text{solutions}\left[s-1\right]\left[t\right]$
+\end_inset
+
+ (again, if it doesn't exist, calculate and come back)
+\end_layout
+
+\begin_layout Enumerate
+Save 
+\begin_inset Formula $\text{solutions}\left[s\right]\left[t\right]=\max$
+\end_inset
+
+ and return
+\end_layout
+
+\begin_layout Standard
+Correctness:
+\end_layout
+
+\begin_layout Proof
+Before we start, let's assume that 
+\begin_inset Formula $\left[0\right]\left[0\right]$
+\end_inset
+
+ is top left for convenience.
+\end_layout
+
+\begin_layout Proof
+In induction.
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Base:
+\series default
+ For 
+\begin_inset Formula $k=0$
+\end_inset
+
+ (
+\begin_inset Formula $\forall W\geq0$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Proof
+Always returns 
+\begin_inset Formula $0$
+\end_inset
+
+ because of the second step of the recursion (there's no partition to choose
+ from).
+\end_layout
+
+\begin_layout Proof
+
+\series bold
+Step: Assume for all values left and above.
+ For total max weight, same or lower (i.e.
+ above or equal).
+\end_layout
+
+\begin_layout Proof
+Let's assume that the algorithm calculates all the values left and above
+ are calculated correctly.
+ So for 
+\begin_inset Formula $\left(k+1,W\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We iterate over the items in 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+, for each, we use only values in the matrix that are above and left to
+ 
+\begin_inset Formula $\left(k+1,W\right)$
+\end_inset
+
+, so they're already calculated and are correct (so each is retrieved in
+ 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Case 1: The optimal solution includes an item from 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's mark the value of the optimal solution 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Let's assume that 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ was the item chosen from 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $w_{i}\leq W$
+\end_inset
+
+ because otherwise we can't choose 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ because alone, it's bringing us to overweight.
+\end_layout
+
+\begin_layout Proof
+BWoC: 
+\begin_inset Formula $B>p_{i}+\text{solutions}\left[k\right]\left[W-w_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Thus, 
+\begin_inset Formula $B-p_{i}$
+\end_inset
+
+ gives us a better solution for 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $W-w_{i}$
+\end_inset
+
+.
+ In contradiction to 
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W-w_{i}\right]$
+\end_inset
+
+ being a correct optimal value.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Thus, 
+\begin_inset Formula $B\leq p_{i}+\text{solutions}\left[k\right]\left[W-w_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W-w_{i}\right]$
+\end_inset
+
+ is a correct solution, we can add 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ to the arrangement that gave that solution and we got a solution to 
+\begin_inset Formula $k+1,W-w_{i}+w_{i}=W$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $B$
+\end_inset
+
+ is an optimal solution 
+\begin_inset Formula $p_{i}+\text{solutions}\left[k\right]\left[W-w_{i}\right]$
+\end_inset
+
+ can't be bigger so we got
+\begin_inset Formula 
+\[
+B=p_{i}+\text{solutions}\left[k\right]\left[W-w_{i}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And finally, we proves that the formula is correct in the case that we use
+ an item from 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+And for the second case
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+Case 2: The optimal solution 
+\begin_inset Formula $B$
+\end_inset
+
+ for 
+\begin_inset Formula $k+1,W$
+\end_inset
+
+, doesn't include an item from 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In that case, the algorithm will return 
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Proof
+BWoC: 
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W\right]<B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+From the case's assumption, 
+\begin_inset Formula $B$
+\end_inset
+
+ doesn't include any items from 
+\begin_inset Formula $G_{k+1}$
+\end_inset
+
+.
+ So it only includes items from 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+.
+ Meaning that 
+\begin_inset Formula $B$
+\end_inset
+
+ is a better solution for 
+\begin_inset Formula $k,W$
+\end_inset
+
+ in contradiction to the induction hypothesis.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+\begin_inset Formula $\text{solutions}\left[k\right]\left[W\right]$
+\end_inset
+
+ is also a solution for 
+\begin_inset Formula $k+1,W$
+\end_inset
+
+ (even if not optimal) because it for 
+\begin_inset Formula $k+1$
+\end_inset
+
+ we have one limit 
+\series bold
+less
+\series default
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $B=\text{solutions}\left[k\right]\left[W\right]$
+\end_inset
+
+ because it can't be better than the optimal.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+These two cases cover all the options.
+ So the algorithm is with that we finished the proof for the induction step.
+\end_layout
+
+\begin_layout Proof
+So the algorithm is correct.
+\end_layout
+
+\begin_layout Standard
+Complexity:
+\end_layout
+
+\begin_layout Proof
+Each cell is calculated at most once.
+ 
+\end_layout
+
+\begin_layout Proof
+BWoC: the complexity is greater that 
+\begin_inset Formula $O\left(nW\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In each recursive call we only check cells from the row adjacent to the
+ left of the current 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ So at most 
+\begin_inset Formula $t+1$
+\end_inset
+
+ for each recursive call (
+\begin_inset Formula $O\left(n\right)=s$
+\end_inset
+
+ and 
+\begin_inset Formula $O\left(W\right)=t$
+\end_inset
+
+).
+ We do ofc at most 
+\begin_inset Formula $\left|G_{s}\right|$
+\end_inset
+
+ iterations like this (this sums in total to 
+\begin_inset Formula $n$
+\end_inset
+
+ ofc).
+\end_layout
+
+\begin_layout Proof
+So the total complexity is
+\begin_inset Formula 
+\[
+\sum_{i=1}^{k}O\left(\left|G_{i}\right|\cdot t\right)=\sum_{i=1}^{k}O\left(\left|G_{i}\right|\cdot O\left(W\right)\right)=O\left(\sum_{i=1}^{k}\left|G_{i}\right|\cdot W\right)=O\left(W\cdot\sum_{i=1}^{k}\left|G_{i}\right|\right)=O\left(nW\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+As requested.
+\end_layout
+
+\begin_layout Standard
+Regarding space complexity, there's the matrix and the recursion, the matrix
+ takes 
+\begin_inset Formula $O\left(nW\right)$
+\end_inset
+
+ (the its size) and the max depth of the recursion is 
+\begin_inset Formula $k+1=O\left(n\right)$
+\end_inset
+
+ (at most we have 
+\begin_inset Formula $n$
+\end_inset
+
+ partitions).
+\end_layout
+
+\begin_layout Standard
+So in total space complexity we get 
+\begin_inset Formula $O\left(nW\right)$
+\end_inset
+
+ (each recursive call takes 
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+ of extra space).
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N$
+\end_inset
+
+ types of coins 
+\begin_inset Formula $c_{1},\dots,c_{N}$
+\end_inset
+
+.
+ The value of 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $w_{i}\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's assume that all the 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are not only natural but also positive (we'll just discard 
+\begin_inset Formula $w_{i}=0$
+\end_inset
+
+ as they only increase the number of coins used without contributing anything).
+\end_layout
+
+\begin_layout Standard
+Recursive algorithm for finding the min amount of coins to make 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The idea:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=0$
+\end_inset
+
+ then return 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k>0$
+\end_inset
+
+ then return 
+\begin_inset Formula $\min\left\{ 1+\text{minCoins}\left(k-w_{i}\right)\mid1\leq i\leq N\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To make the solution optimal, we'll use dynamic programming, maintaining
+ an array of solutions for different values of 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So the formal algorithm:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k=0$
+\end_inset
+
+ return 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Create an array of solutions of size 
+\begin_inset Formula $k$
+\end_inset
+
+ (values initialized to 
+\begin_inset Formula $\infty$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,\dots,k\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\min=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $t\in\left\{ 1,\dots,N\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+if 
+\begin_inset Formula $\text{solutions}\left[i-w_{t}\right]>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{solutions}\left[i-w_{t}\right]+1<\min$
+\end_inset
+
+ then 
+\begin_inset Formula $\min=\text{solutions}\left[i-w_{t}\right]+1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $solutions\left[i\right]=\min$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The runtime of the algorithm is 
+\begin_inset Formula $O\left(kN\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $N$
+\end_inset
+
+ being a constant we get 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+ as requested.
+\end_layout
+
+\begin_layout Standard
+Correctness:
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $k=0$
+\end_inset
+
+ and using 
+\begin_inset Formula $0$
+\end_inset
+
+ coins, the answer is correct.
+\end_layout
+
+\begin_layout Proof
+Now let us assume that for 
+\begin_inset Formula $k=1,\dots,n$
+\end_inset
+
+ the algorithm is correct.
+ RTP: for 
+\begin_inset Formula $k=n+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Using the algorithm for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ is the same except that for 
+\begin_inset Formula $n+1$
+\end_inset
+
+ we have an extra iteration at the end (notice that the inner part of the
+ algorithm, step 3, doesn't refer to 
+\begin_inset Formula $k$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+So as per the assumption, on the 
+\begin_inset Formula $n$
+\end_inset
+
+-th iteration, we got a correct result for all the values from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So assuming we have the result for those values that we need to change,
+ we can check 
+\begin_inset Formula $N$
+\end_inset
+
+ possibilities of starting from coin 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and then checking which gives us the minimal result from 
+\begin_inset Formula $solutions\left[n+1-w_{i}\right]$
+\end_inset
+
+ (all of which are already calculated and correct as per the induction assumptio
+n).
+\end_layout
+
+\begin_layout Proof
+This covers all the options for a starting coin.
+ Let's mark the min num of coins as 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+BWoC, let's assume there's a better solution, let's assume walog, that the
+ first coin is 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ and a total number of coins 
+\begin_inset Formula $b<a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This means that we found a better solution for 
+\begin_inset Formula $k-w_{i}$
+\end_inset
+
+ because without one of the coins 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, we get a solution with 
+\begin_inset Formula $b-1<a-1$
+\end_inset
+
+ coins for 
+\begin_inset Formula $k-w_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Complexity:
+\end_layout
+
+\begin_layout Proof
+We iterate 
+\begin_inset Formula $k$
+\end_inset
+
+ times (dynamic):
+\end_layout
+
+\begin_layout Proof
+Each iterations does a constant number of operations.
+\end_layout
+
+\begin_layout Proof
+So the total runtime is 
+\begin_inset Formula $O\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\end_body
+\end_document
